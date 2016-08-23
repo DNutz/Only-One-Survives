@@ -13,9 +13,13 @@ public class Server {
 		ServerSocket servSock = new ServerSocket(1177);
 		Socket socket =  servSock.accept();
 		Scanner fromClient= new Scanner(socket.getInputStream());
-		number = fromClient.nextInt();
-		temp = number*2;
-		PrintStream ps = new PrintStream(socket.getOutputStream());
-		ps.println(temp);
+		//number = fromClient.nextInt();
+		//temp = number;
+		while (fromClient.hasNextLine()){
+			String xy = fromClient.nextLine();
+			PrintStream ps = new PrintStream(socket.getOutputStream());
+			ps.println(xy);
+			System.out.println(xy);
+		}
 	}
 }
