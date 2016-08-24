@@ -1,4 +1,4 @@
-package Basic;
+package gameplay;
 
 import java.awt.Dimension;
 import java.io.IOException;
@@ -9,9 +9,9 @@ import javax.swing.JFrame;
 
 public class GameFrame extends JFrame{
 
-	public static int WIDTH = 500;
-	public static int HEIGHT = 500;
-	public GameScreen s;
+	//public static int WIDTH = 500;
+	//public static int HEIGHT = 500;
+	public GameScreen gs;
 
 
 	public GameFrame() throws UnknownHostException, IOException {
@@ -24,9 +24,9 @@ public class GameFrame extends JFrame{
 
 	public void init() throws UnknownHostException, IOException {
 		//setLayout(new GridLayout(1,1,0,0));
-		s = new GameScreen();
-		s.setPreferredSize(new Dimension(WIDTH,HEIGHT));
-		add(s);
+		gs = new GameScreen();
+		gs.setPreferredSize(new Dimension(WIDTH,HEIGHT));
+		add(gs);
 		pack();
 		setLocationRelativeTo(null);
 		setVisible(true);

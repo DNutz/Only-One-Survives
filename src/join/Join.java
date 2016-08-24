@@ -1,10 +1,9 @@
-package Main;
+package join;
 
 import java.io.IOException;
 import java.net.UnknownHostException;
 
-import Basic.GameFrame;
-//import clientServer.Client;
+import gameplay.GameFrame;
 
 public class Join {
 	public static void main(String Args[]) throws UnknownHostException, IOException{
